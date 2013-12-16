@@ -4,8 +4,8 @@ function PrivateMessage(args)
 
 	if split_msg[1] == "/w" then
 		if not split_msg[2] then
-			return
 			SendChatMessage(args.player, "Format: /w name message")
+			return
 		end
 		local results = Player.Match(split_msg[2])
 		table.remove(split_msg, 1)
